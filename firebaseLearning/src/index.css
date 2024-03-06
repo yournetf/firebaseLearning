@@ -1,0 +1,90 @@
+
+body{
+    background: rgb(193, 192, 192);
+}
+
+.inputCard{
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    border: 5px solid black;
+    border-radius: 10px;
+    height: clamp(600px, 60vh, 1000px);
+    width: clamp(450px, 30vw, 500px);
+    margin: auto;
+    margin-top: 10vh;
+    position: relative;
+    
+}
+
+.inputCard img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+#inputField{
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    margin-top: 60%;
+    margin-left: 10%;
+    text-align: center;
+    background: rgb(216, 214, 214);
+    border: none;
+    border-radius: 10px;
+    font-size: 32px;
+
+}
+
+#inputField::placeholder{
+    color: rgb(192, 192, 192);
+    font-size: 32px;
+    font-weight: 200;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#addToCart{
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    margin-top: 80%;
+    margin-left: 10%;
+    text-align: center;
+    background: rgb(199, 105, 179);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+#addToCart:hover{
+    background-color: rgb(146, 77, 131);
+}
+
+.listSection{
+    position: absolute;
+    margin-top: 95%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.itemButtons{
+    border: none;
+    background-color: rgb(248, 177, 126);
+    border-radius: 5px;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.201);
+}
