@@ -6,14 +6,13 @@ body{
 .inputCard{
     background-color: rgb(255, 255, 255);
     padding: 0;
-    border: 5px solid black;
     border-radius: 10px;
     height: clamp(600px, 60vh, 1000px);
     width: clamp(450px, 30vw, 500px);
     margin: auto;
     margin-top: 10vh;
     position: relative;
-    
+    border: 5px solid black;
 }
 
 .inputCard img{
@@ -70,13 +69,17 @@ body{
     position: absolute;
     margin-top: 95%;
     width: 100%;
+    height: 150px;
     background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
 }
 
 .list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
+    margin-left: -10%;
 }
 
 .itemButtons{
