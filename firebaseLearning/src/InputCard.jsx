@@ -1,19 +1,11 @@
-import {initializeApp} from "firebase/app"
-import {getDatabase, ref, push, get, child, onValue} from "firebase/database"
-
+import {getDatabase, ref, push, get, child, onValue, onChildMoved} from "firebase/database"
+import { groceriesInDB } from "./firebase/config";
+import { timesInDB } from "./firebase/config";
+import { db } from "./firebase/config";
 import { useState } from "react";
 import shoppingBasket from "./assets/shoppingBasket.jpg"
 
-const appSettings ={
-    databaseURL: "https://groceries-app-a7ad5-default-rtdb.firebaseio.com/"
-  }
 
-  const app = initializeApp(appSettings);
-  const db = getDatabase(app);
-  const groceriesInDB = ref(db, "Groceries");
-  const timesInDB = ref(db, "TimeStamps");
-
-  
 
 
 function InputCard(){
@@ -28,7 +20,7 @@ function InputCard(){
         groceryItems = groceryList.map(item =>
                                             <button value={item} className="itemButtons" onClick={removeItemHandler}>
                                                 {item}
-                                            </button>
+                                            </button>,
             )
       });;
     
@@ -79,8 +71,8 @@ function InputCard(){
         <>
         <div className="inputCard">
             <img id="shoppingBasket" src={shoppingBasket} alt="shoppingBasket" />
-            <input value={input} type="text" id="inputField" placeholder="Bread" onChange={inputHandler} onKeyDown={enterKeyHandler}/>
-            <button id="addToCart" onClick={addToCartHandler}>Add to cart</button>
+            <input value={input} type="text" className="inputField" placeholder="Bread" onChange={inputHandler} onKeyDown={enterKeyHandler}/>
+            <button className="actionButtons" id="addToCart" onClick={addToCartHandler}>Add to cart</button>
             <div className="listSection">
                 <ul className="list">{groceryItems}</ul>
             </div>
